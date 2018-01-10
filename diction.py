@@ -106,3 +106,5 @@ for key,value in users.items():
     location=value['location']
     print("\tFull_name:"+full_name.title())
     print("\tLocation:"+location.title())
+
+
