@@ -74,3 +74,35 @@ print(pizza['crust'])
 print(pizza['toppings'])
 for topping in pizza['toppings']:
     print(topping)
+
+favorite_languages={
+    'jen':['python','ruby'],
+    'edward':['ruby','go'],
+    'phil':['python','haskell'],
+    'serah':['C']
+}
+
+for key,value in favorite_languages.items():
+    print("\n"+key.title()+"'s favorite lanugage are:")
+    for language in value:
+        print("\t"+language.title())
+
+#在字典中存储字典
+users={
+    'aeinstein':{
+        'first':'albert',
+        'last':'einstein',
+        'location':'princeton',
+    },
+    'mcurie':{
+        'first':'marie',
+        'last':'curie',
+        'location':'paris',
+    },
+}
+for key,value in users.items():
+    print("\nUsername:"+key)
+    full_name=value['first']+" "+value['last']
+    location=value['location']
+    print("\tFull_name:"+full_name.title())
+    print("\tLocation:"+location.title())
