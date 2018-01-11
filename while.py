@@ -54,3 +54,20 @@ while 'cat' in pets:
     pets.remove('cat')
 print(pets)
 
+
+#使用用户输入来填充字典
+responses={}
+polling_active=True
+while polling_active:
+    name=input("\nWhat is your name?")
+    response=input("Which mountain would you like to climb someday?")
+    #将答案存储在字典中
+    responses[name]=response;
+    #看看是否还有人参与
+    repeat=input("Would you like to let another person respond?(yes/no)")
+    if repeat=='no':
+        polling_active=False
+#结果
+print("\n ----Poll Results----")
+for key,value in responses.items():
+    print(name+" would like to climb "+value+".")
