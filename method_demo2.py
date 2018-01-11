@@ -39,3 +39,38 @@ def show_completed_models(completed_models):
 
 print_models(unprinted_designs,completed_models)
 show_completed_models(completed_models)
+
+#禁止函数修改列表
+#传递任意数量 的实参
+def make_pizza(*toppings):
+    print(toppings)
+
+make_pizza('pepperono')
+make_pizza('mushrooms','green peppers','extra cheese')
+
+def make_pizza(*toppings):
+    for topping in toppings:
+        print("-"+topping)
+
+make_pizza('pepperono')
+make_pizza('mushrooms','green peppers','extra cheese')
+
+#结合使用位置实参和任意数量实参 *空元组
+def make_pizza(size,*toppings):
+    print("\nMaking a "+str(size)+"-inch pizza with the following toppings:")
+    for topping in toppings:
+        print("-"+topping)
+
+make_pizza(16,'pepperono')
+make_pizza(12,'mushrooms','green peppers','extra cheese')
+
+#使用任意数量的关键字实参 **创建空字典
+def build_profile(first,last,**user_info):
+    profile={}
+    profile['first_name']=first
+    profile['last_name']=last
+    for key,value in user_info.items():
+        profile[key]=value
+    return profile
+user_profile=build_profile('albert','einstein',location='princeton',field='physics')
+print(user_profile)
