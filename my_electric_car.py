@@ -1,4 +1,4 @@
-from car.car import ElectricCar
+from car.car import *
 
 my_tesla=ElectricCar('tesla','Model S',2016)
 my_tesla.battery.describe_battery()
