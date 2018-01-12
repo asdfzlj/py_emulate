@@ -19,3 +19,16 @@ self会自动传递，因此我们不需要传递它。
 
     def roll_over(self):
         print(self.name.title()+" rolled over!")
+
+
+
+my_dog=Dog('jimi',25)
+print("My dog's name is"+my_dog.name.title()+".")
+print("my dog is "+str(my_dog.age)+" years old!")
+my_dog.sit()
+my_dog.roll_over()
+
+your_dog=Dog('mill',29)
+print(your_dog.name+","+str(your_dog.age))
+your_dog.sit()
+your_dog.roll_over()
